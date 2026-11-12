@@ -1,0 +1,397 @@
+@media (min-width: 1600px) {
+  .preview-screen {
+    max-width: 400px;
+  }
+  .preview-stage {
+    padding: 36px;
+  }
+  .studio-right {
+    gap: 24px;
+  }
+  .panel-body {
+    padding: 24px;
+  }
+  .activity-row {
+    padding: 15px 0;
+  }
+}
+@media (max-width: 1180px) {
+  .sidebar {
+    width: 195px;
+    padding: 28px 12px 18px;
+  }
+  .workspace {
+    margin-left: 195px;
+    width: calc(100% - 195px);
+  }
+  .main-content {
+    padding: 28px 22px;
+  }
+  .topbar {
+    padding: 0 22px;
+  }
+  .studio-grid {
+    grid-template-columns: minmax(280px, 1fr) minmax(270px, 1fr);
+    gap: 16px;
+  }
+  .panel-body {
+    padding: 17px;
+  }
+  .control-buttons {
+    gap: 6px;
+  }
+  .control-buttons .primary {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .stats-grid {
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 16px;
+  }
+  .page-heading > div > p:last-child {
+    max-width: 420px;
+  }
+  .settings-grid {
+    gap: 18px;
+  }
+  .app-footer {
+    padding: 20px 22px;
+  }
+  .breadcrumb {
+    font-size: 10px;
+  }
+}
+@media (max-width: 960px) {
+  .sidebar {
+    width: 76px;
+    align-items: center;
+    padding: 25px 10px;
+  }
+  .sidebar .brand {
+    font-size: 0;
+    padding: 0;
+  }
+  .sidebar .brand > span:first-child {
+    font-size: 25px;
+  }
+  .sidebar .edition,
+  .nav-label,
+  .sidebar-bottom {
+    display: none;
+  }
+  .sidebar nav {
+    margin-top: 35px;
+    width: 100%;
+  }
+  .nav-item {
+    font-size: 0;
+    justify-content: center;
+    padding: 15px 5px;
+  }
+  .nav-item > svg {
+    font-size: 22px;
+  }
+  .nav-item > span {
+    display: none;
+  }
+  .workspace {
+    margin-left: 76px;
+    width: calc(100% - 76px);
+  }
+  .stats-grid {
+    gap: 10px;
+  }
+  .page-heading h1 {
+    font-size: 27px;
+  }
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+  .settings-column {
+    gap: 18px;
+  }
+  .save-bar > span {
+    max-width: 300px;
+  }
+  .question-toolbar {
+    gap: 10px;
+  }
+  .question-row {
+    padding: 18px;
+    gap: 12px;
+  }
+  .auth-art {
+    padding: 35px 9%;
+  }
+  .auth-form-wrap {
+    padding: 50px 30px;
+  }
+}
+@media (max-width: 740px) {
+  .main-content {
+    padding: 24px 18px;
+  }
+  .topbar {
+    padding: 0 18px;
+    height: 68px;
+  }
+  .breadcrumb {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .breadcrumb > b {
+    display: none;
+  }
+  .top-actions {
+    gap: 7px;
+  }
+  .page-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .page-heading h1 {
+    font-size: 25px;
+  }
+  .page-heading .pill {
+    font-size: 9px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .studio-grid {
+    grid-template-columns: 1fr;
+  }
+  .studio-right {
+    order: -1;
+  }
+  .studio-right .activity-panel {
+    display: none;
+  }
+  .preview-stage {
+    min-height: 0;
+    padding: 24px 20px;
+  }
+  .preview-screen {
+    max-width: 350px;
+  }
+  .app-footer {
+    flex-direction: column;
+    font-size: 9px;
+    padding: 18px;
+  }
+  .empty-state.horizontal {
+    flex-wrap: wrap;
+  }
+  .empty-state.horizontal > .btn {
+    width: 100%;
+  }
+  .question-toolbar {
+    padding: 15px;
+  }
+  .question-toolbar > select {
+    width: 100%;
+  }
+  .search-input {
+    flex-basis: 100%;
+  }
+  .toolbar-actions {
+    width: 100%;
+  }
+  .toolbar-actions > * {
+    flex: 1;
+  }
+  .question-row {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .question-number {
+    display: none;
+  }
+  .row-actions {
+    flex-direction: column;
+  }
+  .answer-summary {
+    gap: 7px 14px;
+    font-size: 10px;
+  }
+  .question-details h2 {
+    font-size: 12px;
+  }
+  .form-row {
+    gap: 12px;
+  }
+  .panel-heading {
+    padding: 16px;
+  }
+  .save-bar {
+    flex-wrap: wrap;
+  }
+  .save-bar .btn {
+    width: 100%;
+  }
+  .history-item summary {
+    padding: 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .history-icon {
+    display: none;
+  }
+  .history-item summary > div {
+    min-width: 160px;
+  }
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+  .auth-art {
+    padding: 25px;
+    gap: 25px;
+    min-height: 230px;
+    border-right: 0;
+    border-bottom: 1px solid #45573a;
+  }
+  .auth-art h1 {
+    font-size: 32px;
+    margin: 15px 0 0;
+  }
+  .auth-art h1 br {
+    display: none;
+  }
+  .auth-art h1 em {
+    display: block;
+  }
+  .auth-art > div > p:last-child,
+  .auth-foot {
+    display: none;
+  }
+  .auth-art > .brand {
+    font-size: 24px;
+  }
+  .auth-art > div > .eyebrow {
+    font-size: 8px;
+  }
+  .auth-form-wrap {
+    padding: 35px 25px;
+  }
+  .auth-form h2 {
+    font-size: 26px;
+  }
+  .auth-form .form-icon {
+    display: none;
+  }
+  .auth-form > p:not(.eyebrow) {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .app-shell {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    padding: 13px 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    gap: 10px;
+  }
+  .sidebar .brand > span:first-child {
+    width: 28px;
+    height: 31px;
+    border-radius: 8px;
+    font-size: 21px;
+  }
+  .sidebar nav {
+    margin: 0 0 0 auto;
+    flex-direction: row;
+    gap: 3px;
+    width: auto;
+  }
+  .nav-item {
+    padding: 9px;
+    min-height: 40px;
+    border-radius: 7px;
+  }
+  .nav-item svg {
+    font-size: 19px;
+  }
+  .workspace {
+    margin: 0;
+    width: 100%;
+  }
+  .topbar {
+    height: 58px;
+    padding: 0 16px;
+  }
+  .main-content {
+    padding: 23px 16px;
+  }
+  .stats-grid {
+    gap: 10px;
+  }
+  .stat-card {
+    padding: 14px;
+  }
+  .stat-card > b {
+    font-size: 26px;
+  }
+  .stat-card p {
+    font-size: 9px;
+  }
+  .page-heading h1 {
+    font-size: 24px;
+  }
+  .page-heading > div > p:last-child {
+    font-size: 11px;
+  }
+  .app-footer {
+    padding: 18px 16px;
+  }
+  .question-row {
+    padding: 17px 13px;
+  }
+  .pagination {
+    padding: 16px 12px;
+    font-size: 10px;
+  }
+  .pagination .btn {
+    font-size: 10px;
+    padding: 9px;
+  }
+  .editor-content {
+    padding: 18px;
+  }
+  .preview-stage {
+    padding: 19px 15px;
+  }
+  .preview-footer {
+    padding: 12px 16px;
+  }
+  .form-row {
+    gap: 10px;
+  }
+  .control-buttons .primary {
+    font-size: 12px;
+  }
+  .settings-fields .form-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .history-item summary > .pill {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

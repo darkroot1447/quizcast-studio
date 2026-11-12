@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuizCast Studio — yayın afişi</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #070b09;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif;
+      }
+      .poster {
+        container-type: inline-size;
+        width: min(100vw, calc(100dvh * 9 / 16));
+        aspect-ratio: 9 / 16;
+        position: relative;
+        overflow: hidden;
+        color: #f0f4ee;
+        background:
+          radial-gradient(ellipse at 100% 0%, #2e4224 0, transparent 42%),
+          radial-gradient(ellipse at 0% 88%, #1a2c24 0, transparent 48%),
+          #111c19;
+        padding: 7.2cqw 7cqw 6.2cqw;
+        display: flex;
+        flex-direction: column;
+      }
+      .poster::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(#a8d78308 1px, transparent 1px),
+          linear-gradient(90deg, #a8d78308 1px, transparent 1px);
+        background-size: 10cqw 10cqw;
+        pointer-events: none;
+      }
+      .poster > * {
+        position: relative;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .mark {
+        display: flex;
+        align-items: center;
+        gap: 2.4cqw;
+        font-weight: 760;
+        letter-spacing: -0.04em;
+        font-size: 4.6cqw;
+      }
+      .bolt {
+        width: 8.2cqw;
+        height: 8.2cqw;
+        border-radius: 2.1cqw;
+        background: #c6f36b;
+        display: grid;
+        place-items: center;
+      }
+      .ratio {
+        font-size: 2.5cqw;
+        letter-spacing: 0.04em;
+        color: #d5e6c4;
+        border: 1px solid #3d5344;
+        border-radius: 999px;
+        padding: 1.3cqw 2.4cqw;
+      }
+      h1 {
+        margin: 9cqw 0 0;
+        font-size: 12.4cqw;
+        line-height: 0.9;
+        letter-spacing: -0.055em;
+        font-weight: 760;
+        max-width: 11ch;
+      }
+      .lead {
+        margin: 4.2cqw 0 0;
+        max-width: 28ch;
+        font-size: 3.55cqw;
+        line-height: 1.45;
+        color: #c5d4c4;
+      }
+      .card {
+        margin-top: 6.5cqw;
+        border: 1px solid #314438;
+        border-radius: 4.2cqw;
+        background: linear-gradient(180deg, #18241c 0%, #121c18 100%);
+        padding: 4.6cqw 4.4cqw 4.2cqw;
+        box-shadow: 0 4cqw 12cqw #0006;
+      }
+      .qmeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        color: #9fb09a;
+        font-size: 2.5cqw;
+        letter-spacing: 0.08em;
+      }
+      .qmeta b {
+        color: #f0f4ee;
+        font-weight: 720;
+        letter-spacing: -0.03em;
+        font-size: 3.1cqw;
+      }
+      .tag {
+        letter-spacing: 0;
+        border: 1px solid #3d5344;
+        border-radius: 999px;
+        padding: 0.7cqw 1.8cqw;
+        color: #d7e7cb;
+      }
+      h2 {
+        margin: 3.2cqw 0 3.6cqw;
+        font-size: 5.15cqw;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+        font-weight: 720;
+      }
+      .opt {
+        display: flex;
+        align-items: center;
+        gap: 2.6cqw;
+        border: 1px solid #314438;
+        border-radius: 2.2cqw;
+        padding: 2.15cqw 2.6cqw;
+        margin-top: 1.7cqw;
+        font-size: 3.35cqw;
+        color: #e7f0e4;
+      }
+      .opt span {
+        width: 4.6cqw;
+        color: #9fb09a;
+        font-weight: 680;
+      }
+      .opt.hit {
+        background: #c6f36b;
+        color: #172010;
+        border-color: #c6f36b;
+        font-weight: 680;
+      }
+      .opt.hit span {
+        color: #172010;
+      }
+      .tick {
+        margin-left: auto;
+        font-size: 3.6cqw;
+      }
+      .timer {
+        display: flex;
+        align-items: center;
+        gap: 2.4cqw;
+        margin-top: 3.6cqw;
+        color: #c5d4c4;
+        font-size: 2.6cqw;
+      }
+      .timer b {
+        margin-left: auto;
+        color: #f0f4ee;
+        font-size: 3.4cqw;
+        font-variant-numeric: tabular-nums;
+      }
+      .bar {
+        flex: 1;
+        height: 1.15cqw;
+        border-radius: 999px;
+        background: #243028;
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        width: 68%;
+        height: 100%;
+        background: #c6f36b;
+      }
+      .why {
+        margin: 2.4cqw 0 0;
+        color: #b7c8b4;
+        font-size: 2.7cqw;
+        line-height: 1.4;
+      }
+      .board {
+        margin-top: 4.2cqw;
+        display: flex;
+        align-items: center;
+        gap: 2.4cqw;
+        font-size: 3.1cqw;
+      }
+      .board small {
+        display: block;
+        color: #9fb09a;
+        font-size: 2.3cqw;
+        letter-spacing: 0.06em;
+        margin-bottom: 1.4cqw;
+      }
+      .rank {
+        width: 5.4cqw;
+        height: 5.4cqw;
+        border-radius: 1.4cqw;
+        background: #243224;
+        display: grid;
+        place-items: center;
+        font-weight: 720;
+      }
+      .board strong {
+        font-weight: 650;
+      }
+      .pts {
+        margin-left: auto;
+        color: #c6f36b;
+        font-weight: 720;
+        font-variant-numeric: tabular-nums;
+      }
+      .facts {
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.15fr;
+        gap: 3cqw;
+        padding-top: 5cqw;
+        border-top: 1px solid #2a3a30;
+      }
+      .facts b {
+        display: block;
+        font-size: 6.2cqw;
+        letter-spacing: -0.05em;
+        line-height: 1;
+        font-weight: 760;
+      }
+      .facts span {
+        display: block;
+        margin-top: 1.2cqw;
+        color: #b7c8b4;
+        font-size: 2.55cqw;
+        line-height: 1.3;
+      }
+      .legal {
+        margin-top: 3.6cqw;
+        color: #7e9084;
+        font-size: 2.15cqw;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster">
+      <div class="brand">
+        <div class="mark">
+          <span class="bolt" aria-hidden="true">
+            <svg width="46%" viewBox="0 0 64 64" fill="none">
+              <path d="M36 8 16 36h14l-4 20 22-30H34z" fill="#172010" />
+            </svg>
+          </span>
+          quizcast
+        </div>
+        <div class="ratio">OBS 1080 × 1920</div>
+      </div>
+      <h1>Cevabını sohbete yaz.</h1>
+      <p class="lead">İlk geçerli cevap puanı kilitler. Stüdyo bu bilgisayarda kalır, sahne OBS’ye düşer.</p>
+      <section class="card" aria-label="Yayın ekranından bir soru">
+        <div class="qmeta">
+          <div>SORU <b>01</b> / 10</div>
+          <div class="tag">Doğa</div>
+        </div>
+        <h2>Aşağıdaki canlılardan hangisi fotosentez yapmaz?</h2>
+        <div class="opt"><span>A</span> Yonca</div>
+        <div class="opt"><span>B</span> Ayçiçeği</div>
+        <div class="opt"><span>C</span> Çam</div>
+        <div class="opt hit"><span>D</span> Şapkalı mantar <span class="tick">✓</span></div>
+        <div class="timer">
+          Yayıncı bekleniyor
+          <div class="bar" aria-hidden="true"><i></i></div>
+          <b>6 sn</b>
+        </div>
+        <p class="why">Mantarlar fotosentez yapmaz; besinlerini dışarıdan alır.</p>
+        <div class="board">
+          <div>
+            <small>ZİRVE</small>
+            <div style="display: flex; align-items: center; gap: 2.2cqw">
+              <span class="rank">1</span>
+              <strong>Tarayıcı yarışmacısı</strong>
+            </div>
+          </div>
+          <div class="pts">149 puan</div>
+        </div>
+      </section>
+      <div class="facts">
+        <div>
+          <b>100</b>
+          <span>özgün Türkçe soru</span>
+        </div>
+        <div>
+          <b>9</b>
+          <span>kategori, üç zorluk</span>
+        </div>
+        <div>
+          <b>Demo</b>
+          <span>anahtarsız, yerelde</span>
+        </div>
+      </div>
+      <p class="legal">QuizCast Studio bağımsız bir yazılımdır. TikTok’un ürünü veya iş ortağı değildir.</p>
+    </main>
+  </body>
+</html>
